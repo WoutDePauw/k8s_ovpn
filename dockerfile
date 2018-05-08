@@ -8,6 +8,6 @@ RUN yum update -y && \
 ADD create_server_cert.sh create_server_cert.sh
 
 
-ADD server.conf ~/server.conf
+ADD server.conf server.conf
 
 EXPOSE 1194
