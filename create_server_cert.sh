@@ -4,5 +4,5 @@ chmod 600 server.key
   openssl req -new -key server.key -out server.csr -subj /CN=vpn.team05.labci.eu/
 } || echo 'could not create request'
 {
-  openssl x509 -req -in server.csr -out server.crt -CA /server/ca.cert -CAkey /server/ca.key -CAserial /server/ca.srl -days 365
+  openssl x509 -req -in server.csr -out server.crt -CA /server/ca.crt -CAkey /server/ca.key -CAserial /server/ca.srl -days 365
 } || echo 'could not sign cert'
