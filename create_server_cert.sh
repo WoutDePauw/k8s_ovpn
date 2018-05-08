@@ -1,5 +1,5 @@
 openssl genrsa -out ~/server.key 2048
-chmod 600 server.key
+chmod 600 ~/server.key
 {
   openssl req -new -key ~/server.key -out ~/server.csr -subj /CN=vpn.team05.labci.eu/
 } || echo 'could not create request'
