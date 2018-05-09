@@ -3,4 +3,4 @@ if [ ! -c /dev/net/tun ]; then
     mknod /dev/net/tun c 10 200
 fi
 
-exec openvpn --config /root/server.conf
+exec sudo openvpn --config /root/server.conf
