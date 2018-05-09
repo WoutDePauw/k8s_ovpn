@@ -8,6 +8,8 @@ RUN yum update -y && \
 ADD create_server_cert.sh create_server_cert.sh
 
 ADD server.conf server.conf
-RUN openvpn --config /server.conf
+
+
+RUN ./create_server_cert.sh && openvpn --config /server.conf
 
 EXPOSE 1194
