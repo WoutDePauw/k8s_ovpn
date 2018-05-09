@@ -3,4 +3,4 @@ if [ ! -c /dev/net/tun ]; then
     mknod /dev/net/tun c 10 200
 fi
 
-openvpn --config ~/server.conf
+openvpn --config /root/server.conf
