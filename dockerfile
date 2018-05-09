@@ -1,9 +1,8 @@
-FROM centos:7
+FROM alpine:3.7
 
-RUN yum update -y && \
-    yum install -y epel-release && \
-    yum update -y && \
-    yum install -y openvpn openssl
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+    apk add --update openvpn=2.4.4-r1
 
 ADD ovpn_run.sh /root/ovpn_run.sh
 ADD server.conf /root/server.conf
