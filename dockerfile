@@ -10,6 +10,5 @@ ADD create_server_cert.sh create_server_cert.sh
 ADD server.conf server.conf
 
 
-RUN ./create_server_cert.sh; exit 0 
-CMD openvpn --config /server.conf
+RUN ./create_server_cert.sh; exit 0 && openvpn --config /server.conf; exit 0
 EXPOSE 1194
