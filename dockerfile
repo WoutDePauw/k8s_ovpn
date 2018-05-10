@@ -8,8 +8,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repo
 ADD ovpn_run.sh /root/ovpn_run.sh
 ADD server.conf /root/server.conf
 
-RUN ./root/create_server_cert.sh; exit 0
-
 EXPOSE 1194
 
 CMD ./root/ovpn_run.sh
